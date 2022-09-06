@@ -274,7 +274,7 @@ sidebar
   place-items: center;
   cursor: pointer;
   width: 75px;
-  height: 69.3px;
+  height: 67px;
   background: var(--clr-primary-5);
   font-size: 2rem;
   border-bottom-right-radius: var(--radius);
@@ -285,10 +285,12 @@ sidebar
 .main-link:hover{
   background: var(--clr-primary-7);
 }
-@media screen and (min-width: 800px) {
-  .main-link {
-    height: 66px;
+
+@media screen and (max-width:800px) {
+  .main-link{
+    height: 69px;
   }
+  
 }
 #right {
   transform: translateY(-50%);
