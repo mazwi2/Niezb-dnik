@@ -193,7 +193,7 @@ Header
 }
 .header-center {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
 }
 .header-center h2 {
