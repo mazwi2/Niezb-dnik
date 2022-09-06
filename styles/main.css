@@ -43,8 +43,9 @@ Variables
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
-  --light-shadow: 0 0px 25px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 0px 25px rgba(0, 0, 0, 0.2);
+  --inset-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
 }
 /*
@@ -243,30 +244,46 @@ sidebar
 /* end of JS */
 
 .sidebar-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   justify-content: space-around;
   width: calc(100% - 75px);
   border-top: solid 3px var(--clr-primary-5);
   border-bottom: solid 3px var(--clr-primary-5);
   background: var(--clr-grey-10);
-  padding: 0.5rem 0;
+  
 }
 
 .link {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: var(--transition);
+  padding: 0.5rem 0;
+  margin-right: 1px;
+}
+.link:hover{
+  border-radius: var(--radius);
+  box-shadow: var(--inset-shadow);
+}
+.link i{
+  font-size: 1.1rem;
 }
 .main-link {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
   width: 75px;
-  height: 65.5px;
-  margin: 0 auto;
+  height: 69.3px;
   background: var(--clr-primary-5);
   font-size: 2rem;
   border-bottom-right-radius: var(--radius);
   border-top-right-radius: var(--radius);
   color: var(--clr-white);
   transition: var(--transition);
+}
+.main-link:hover{
+  background: var(--clr-primary-7);
 }
 @media screen and (min-width: 800px) {
   .main-link {
