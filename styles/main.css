@@ -304,3 +304,42 @@ sidebar
 end of sidebar
 =============
 */
+/* 
+=============
+main
+=============
+*/
+main{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+}
+.main-center{
+  display: grid;
+  place-self: center;
+  margin-top: 8rem;
+  place-self: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+.main-center h3{
+  place-self: center;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0 1rem 0.5rem 1rem;
+
+}
+.main-center h3:hover{
+  border-bottom: 3px solid var(--clr-primary-5);
+}
+
+.main-center li{
+  margin-top: 2rem;
+}
+/* 
+=============
+end of main
+=============
+*/
